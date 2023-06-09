@@ -1,7 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
 const app = express();
-const {html} = require('html-template-tag');
 
 
 app.use(express.static('public'));

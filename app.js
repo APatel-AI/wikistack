@@ -8,7 +8,6 @@ app.use(express.static('public'));
 
 app.use(express.urlencoded({ extended: false }));
 
-
 // Routes
 app.get('/', (req, res,next) => {
     const layout = (content) =>`
@@ -19,7 +18,7 @@ app.get('/', (req, res,next) => {
           <link rel="stylesheet" href="/stylesheets/style.css" />
         </head>
         <body>
-          ${content}
+          <h1> ${content} </h1> 
         </body>
       </html>
     `;
@@ -28,7 +27,4 @@ app.get('/', (req, res,next) => {
   });
   
 
-const port = 3000
-app.listen(port, () => {
-    console.log(`Server is listening on port ${port}`);
-  });
+app.listen(3000, 'localhost') ;

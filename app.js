@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const app = express();
 const {html} = require('html-template-tag');
 
+
 app.use(express.static('public'));
 
 
@@ -11,7 +12,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Routes
 app.get('/', (req, res,next) => {
-    const layout = (content) => html`
+    const layout = (content) =>`
       <!DOCTYPE html>
       <html>
         <head>

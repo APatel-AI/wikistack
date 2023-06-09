@@ -9,7 +9,8 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
 // Routes
-app.get('/', (req, res,next) => {
+app.get('/', (req, res, next) => {
+  
     const layout = (content) =>`
       <!DOCTYPE html>
       <html>
